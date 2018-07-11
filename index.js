@@ -1,10 +1,20 @@
 const fs = require('fs');
+const path = require('path');
 const Yaml = require('js-yaml');
-const Discord = require('discord.js');
+const Commando = require('discord.js-commando');
 
 const secrets = Yaml.safeLoad(fs.readFileSync('secrets.yml', 'utf8'));
 
-const bot = new Discord.Client();
+const bot = new Commando.Client({
+
+});
+
+bot.registry
+  .registerGroups([
+    ['admin', 'Admin commands'],
+  ])
+  .registerDefaults()
+  .registerCommandsIn(path.join(__dirname, 'commands'));
 
 bot.on('ready', () => {
   console.log(`Logged in as ${bot.user.tag}!`);

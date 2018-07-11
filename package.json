@@ -3,16 +3,23 @@
   "version": "0.0.1",
   "description": "Empyrion server Discord bot",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
-    "pkg": "pkg index.js --out-path build --targets node8-win-x64"
+    "pkg": "pkg package.json --out-path build --targets node8-win-x64"
   },
   "author": "Chase McCarthy",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2",
+    "discord.js-commando": "^0.10.0",
     "js-yaml": "^3.12.0"
   },
   "devDependencies": {
     "pkg": "^4.3.3"
+  },
+  "pkg": {
+    "assets": [
+      "commands/**/*.js"
+    ]
   }
 }
