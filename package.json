@@ -19,7 +19,7 @@
   },
   "pkg": {
     "assets": [
-      "commands/**/*.js"
+      "src/**/*.js"
     ]
   }
 }

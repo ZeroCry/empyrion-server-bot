@@ -1,0 +1,6 @@
+empyrion_dir: C:\steamcmd\empyriondedicatedserver\
+empyrion_config: dedicated.yaml
+empyrion_start: EmpyrionLauncher.exe -startDedi
+empyrion_update: C:\steamcmd\steamcmd.exe +login anonymous +force_install_dir "C:\steamcmd\empyriondedicatedserver" +app_update 530870 +quit
+admins:
+  - '294474324264484864'
